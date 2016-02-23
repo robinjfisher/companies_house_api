@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "date_of_creation": "2011-03-24",
+      "description": "07577596 - Incorporated on 24 March 2011",
+      "title": "CAPTURED SPARKS LIMITED",
+      "matches": {
+        "title": [
+          1,
+          8,
+          10,
+          15
+        ]
+      },
+      "links": {
+        "self": "/company/07577596"
+      },
+      "snippet": "15, Meadway, Barnet, Hertfordshire, EN5 5LG",
+      "kind": "searchresults#company",
+      "company_number": "07577596",
+      "address": {
+        "locality": "BARNET",
+        "postal_code": "EN5 5LG",
+        "region": "HERTFORDSHIRE",
+        "address_line_2": "MEADWAY",
+        "address_line_1": "15"
+      },
+      "company_type": "ltd",
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "company_status": "active"
+    }
+  ],
+  "page_number": 1,
+  "items_per_page": 50,
+  "total_results": 1,
+  "start_index": 0,
+  "kind": "search#companies"
+}
