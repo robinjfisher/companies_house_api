@@ -1,8 +1,6 @@
-# CompaniesHouseApi
+# CompaniesHouse
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/companies_house_api`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+The CompaniesHouse gem provides a wrapper around the Companies House API. Two methods are currently provided. One to search the Companies House database against a given string. The second to retrieve company information given a company number.
 
 ## Installation
 
@@ -22,13 +20,35 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+An API key is required which can be obtained by registering with [Companies House](https://developer.companieshouse.gov.uk/api/docs/index/gettingStarted/apikey_authorisation.html).
 
-## Development
+Configure the gem using a block in an initializer:
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
+```ruby
+CompaniesHouse.configure do |config|
+  config.api_key = "your_api_key_here"
+end
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Planning ahead for future development, there are two classes, `Search` and `Company Information`.
+
+To search for company information, configure as above and then instantiate a new instance of the `Search` class.
+
+```ruby
+ch = CompaniesHouse::Search.new
+ch.search_companies("captured sparks")
+```
+
+This returns a plain ruby object with two attributes: a count of how many results are returned for the search and an array of those results.
+
+To retrieve company information:
+
+```ruby
+ch = CompaniesHouse::CompanyInformation.new
+ch.company_profile("07577596")
+```
+
+Again, this return a plain ruby object with attributes as shown in the API documentation e.g. `company_name`.
 
 ## Contributing
 
