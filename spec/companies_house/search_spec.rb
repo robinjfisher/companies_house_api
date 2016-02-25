@@ -6,7 +6,6 @@ describe CompaniesHouse::Search do
 
   before(:each) do
     CompaniesHouse.configure do |config|
-      # config.api_key = "l-KnFlO6MXhnLq-Dtwcz56sOWqakyR7xqt2UlC6i"
       config.api_key = "fdfkjsdkfgsdjhfdsjhgfsd"
     end
   end
@@ -24,6 +23,10 @@ describe CompaniesHouse::Search do
 
     it "should return the number of results" do
       expect(@response.companies_count).to eq(1)
+    end
+
+    it "should return an array of company items" do
+      expect(@response.companies).to be_an(Array)
     end
 
   end

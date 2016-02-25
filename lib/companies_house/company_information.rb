@@ -11,7 +11,13 @@ module CompaniesHouse
       url = "company/#{company_number}"
       response = @@conn.get url
       result = JSON.parse(response.body, object_class: OpenStruct)
-      return result
+      if result.respond_to?(:errors)
+        if result.errors[0][:error] == "company-profile-not-found"
+          raise CompanyNotFoundError.new("A company with that registration number could not be found")
+        end
+      else
+        return result
+      end
     end
 
   end

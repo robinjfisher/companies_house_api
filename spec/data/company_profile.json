@@ -1,0 +1,45 @@
+{
+   "has_been_liquidated":false,
+   "jurisdiction":"england-wales",
+   "sic_codes":[
+      "62012"
+   ],
+   "date_of_creation":"2011-03-24",
+   "company_number":"07577596",
+   "type":"ltd",
+   "company_name":"CAPTURED SPARKS LIMITED",
+   "last_full_members_list_date":"2015-03-24",
+   "status":"active",
+   "registered_office_address":{
+      "locality":"Barnet",
+      "address_line_2":"New Barnet",
+      "region":"Hertfordshire",
+      "postal_code":"EN5 5LG",
+      "address_line_1":"15 Meadway"
+   },
+   "undeliverable_registered_office_address":false,
+   "accounts":{
+      "next_due":"2016-09-30",
+      "last_accounts":{
+         "type":"total-exemption-small",
+         "made_up_to":"2014-12-31"
+      },
+      "next_made_up_to":"2015-12-31",
+      "accounting_reference_date":{
+         "month":"12",
+         "day":"31"
+      },
+      "overdue":false
+   },
+   "annual_return":{
+      "next_due":"2016-04-21",
+      "last_made_up_to":"2015-03-24",
+      "next_made_up_to":"2016-03-24",
+      "overdue":false
+   },
+   "etag":"4adfa28ca4f626ee2941dfa4c8d3a33740b4df4e",
+   "company_status":"active",
+   "has_insolvency_history":false,
+   "has_charges":false,
+   "can_file":true
+}

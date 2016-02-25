@@ -1,6 +1,6 @@
 module CompaniesHouse
 
-#   CompaniesHouseApi.configure do |config|
+#   CompaniesHouse.configure do |config|
 #     config.api_key = '837432u32hlfkwjhkljehw'
 #   end
 
