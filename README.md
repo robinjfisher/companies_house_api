@@ -46,9 +46,10 @@ To retrieve company information:
 ```ruby
 ch = CompaniesHouse::CompanyInformation.new
 ch.company_profile("07577596")
+ch.registered_office_address("07577596")
 ```
 
-Again, this return a plain ruby object with attributes as shown in the API documentation e.g. `company_name`.
+Again, these return plain ruby objects with attributes as shown in the API documentation for the named methods.
 
 ## Contributing
 
