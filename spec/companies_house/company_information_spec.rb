@@ -33,6 +33,31 @@ describe CompaniesHouse::CompanyInformation do
 
     end
 
+    describe "registered_office_address" do
+
+      context "when a valid company number is provided" do
+
+        before do
+          url = "https://fdfkjsdkfgsdjhfdsjhgfsd:@api.companieshouse.gov.uk/company/07577596"
+          stub_request(:get, url).to_return(
+            :body => load_fixture("registered_office_address.json"),
+            :status => 200
+          )
+          @response = subject.new.company_profile("07577596")
+        end
+
+        it 'should return a PORO' do
+          expect(@response).to be_an(OpenStruct)
+        end
+
+        it 'should respond to dot methods' do
+          expect(@response.locality).to match(/Barnet/i)
+        end
+
+      end
+
+    end
+
   end
 
 end
